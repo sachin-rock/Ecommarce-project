@@ -1,14 +1,15 @@
 import React from 'react'
-import { Flex, Spacer,Image ,Text} from '@chakra-ui/react'
+import { Flex, Spacer,Image ,Text,Icon} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-
+import {BsSearch,BsBasket3} from 'react-icons/bs'
+import {RiUserLine} from 'react-icons/ri'
 
 
 export const NavBar = () => {
   return (
-    <Flex bg="white"
+    <Flex bg="#c2d4de"
     borderBottom="1px solid black"
-    p={1}
+    p={2}
     alignItems="center"
     justifyContent="center"
     >
@@ -19,15 +20,17 @@ export const NavBar = () => {
    
     m={5} />
     <Spacer />
-    <Link to="/collation/all" ><Text  px={4} py={2} fontSize="xl">SHOP</Text>  </Link>
-    <Link to="/collation/all" ><Text  px={4} py={2}>WOMEN</Text>  </Link>
-    <Link to="/collation/all" ><Text  px={4} py={2}>MEN</Text>  </Link>
-    <Link to="/collation/all" ><Text  px={4} py={2}>BOYS</Text>  </Link>
-    <Link to="/collation/all" ><Text  px={4} py={2}>GIRL</Text>  </Link>
+    <Link to="/collation/all" ><Text borderRadius="5px" border="1px solid white" bg="pink" px={3} py={1} m={4}>SHOP</Text>  </Link>
+    <Link to="/collation/all" ><Text  borderRadius="5px" border="1px solid white" bg="pink" px={3} py={1} m={4}>WOMEN</Text>  </Link>
+    <Link to="/collation/all" ><Text  borderRadius="5px" border="1px solid white" bg="pink" px={3} py={1} m={4}>MEN</Text>  </Link>
+    <Link to="/collation/all" ><Text  borderRadius="5px" border="1px solid white" bg="pink" px={3} py={1} m={4}>BOYS</Text>  </Link>
+    <Link to="/collation/all" ><Text borderRadius="5px" border="1px solid white" bg="pink" px={3} py={1} m={4}>GIRL</Text>  </Link>
    
-   
-
-
+   <Spacer/>
+   <Icon boxSize="20px" mx={5} as={BsSearch} />
+   <Icon boxSize="20px" mx={5} as={RiUserLine}/>
+   <Icon boxSize="20px" mx={5} as={BsBasket3}/>
+   <Text>0</Text>
     </Flex>
   )
 }
