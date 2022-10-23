@@ -8,7 +8,7 @@ import {RiUserLine} from 'react-icons/ri'
 export const NavBar = () => {
   return (
     <Flex bg="#c2d4de"
-    borderBottom="1px solid black"
+    border="1px solid black"
     p={2}
     alignItems="center"
     justifyContent="center"
